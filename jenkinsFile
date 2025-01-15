@@ -1,0 +1,20 @@
+pipeline {
+    agent any
+    environment {
+        INSTAGRAM_EVLEE = "@evlee"
+    }
+
+    stages {
+        stage("SALUDO 1") {
+            steps {
+                echo "Buenas ${INSTAGRAM_EVLEE}"
+            }
+        }
+
+        stage("SALUDO 2") {
+            steps {
+                echo "${env.INSTAGRAM_EVLEE}"
+            }
+        }
+    }    
+}
